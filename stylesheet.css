@@ -1,10 +1,23 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center;  */
+    justify-items: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
+
+.title {
+margin-bottom: 20px}
+
+/* .disabled {
+    pointer-events: none;
+    opacity: 0.2;
+} */
+
+button {
+    margin-bottom: 20px}
 
 .grid-container {
     display: grid;

@@ -7,3 +7,17 @@ for (let i = 0; i < 16; i++) {
         gridContainer.appendChild(gridItem);
     }
 }
+
+gridContainer.addEventListener("mouseover", (event) => {
+    const hoveredSquare = event.target;
+    hoveredSquare.style.backgroundColor = "lightblue"; 
+});
+
+const button = document.querySelector('button');
+button.addEventListener('click', function() {
+    // Display the prompt when the button is clicked
+    const userInput = prompt('Please Give me a number');
+    console.log(userInput);
+  });
+
+  
