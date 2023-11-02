@@ -13,7 +13,16 @@ function createGrid(rows, cols) {
         gridContainer.appendChild(square);
 
         square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'blue';
+            const colors = [];
+            for (let i = 0; i < 10; i++) {
+            const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            colors.push(randomColor);
+            square.style.backgroundColor = colors[i];
+            setTimeout(() => {
+            square.style.backgroundColor = colors[i];
+            }, i * 1000); // This will change colors every second
+            
+            }
         });
     }
 }
