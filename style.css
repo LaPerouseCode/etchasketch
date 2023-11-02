@@ -1,0 +1,39 @@
+.container-main {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#gridContainer {
+    display: grid;
+    background-color: white;
+    gap: 0;
+    border: 2px solid black;
+}
+
+.square {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+.btnContainer {
+
+}
+
+#clear-btn, #resize-btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#clear-btn:hover, #resize-btn:hover {
+    background-color: rgb(158, 60, 70);
+}

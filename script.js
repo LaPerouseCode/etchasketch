@@ -1,23 +1,47 @@
-const gridContainer = document.getElementById('gridContainer');
-// Create 16x16 grid
-for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++) {
-        const gridItem = document.createElement('div');
-        gridItem.classList.add('grid-item');
-        gridContainer.appendChild(gridItem);
+let gridContainer = document.getElementById("gridContainer");
+let clearButton = document.getElementById("clear-btn");
+let resizeButton = document.getElementById("resize-btn");
+
+function createGrid(rows, cols) {
+    // gridContainer.innerHTML = '';
+    gridContainer.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${rows}, 1fr`;
+
+    for (let i = 0; i < rows * cols; i++) {
+        let square = document.createElement("div");
+        square.className = "square";
+        gridContainer.appendChild(square);
+
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = 'blue';
+        });
     }
 }
 
-gridContainer.addEventListener("mouseover", (event) => {
-    const hoveredSquare = event.target;
-    hoveredSquare.style.backgroundColor = "lightblue"; 
-});
+function clearGrid() {
+    let squares = document.querySelectorAll('.square');
+    squares.forEach((square) => {
+        square.style.backgroundColor = '';
+    });
+}
 
-const button = document.querySelector('button');
-button.addEventListener('click', function() {
-    // Display the prompt when the button is clicked
-    const userInput = prompt('Please Give me a number');
-    console.log(userInput);
-  });
+function resizeGrid() {
+    let size = prompt("Enter the number of squares per side (1-100):");
+    size = parseInt(size);
 
-  
+    if (size >= 1 && size <= 100) {
+        createGrid(size, size);
+    } else {
+        alert("Please enter a valid number between 1 and 100.");
+    }
+}
+
+createGrid(16, 16);
+
+
+
+
+
+
+
+

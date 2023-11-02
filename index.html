@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid of Squares</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <h1 class="title" class="disabled">Etch a Sketch!</h1>
-    <button id="btn"> NEW GRID </button>
-    <div class="grid-container" id="gridContainer">
-        <!-- 16x16 grid of square divs will be generated here -->
+    <div class="container-main">
+        <div class="btnContainer">
+            <button id="clear-btn" onclick="clearGrid()">Clear</button>
+            <button id="resize-btn" onclick="resizeGrid()">Resize Grid</button>
+        </div>
+        <div id="gridContainer"></div>
     </div>
+
+    
+
     <script src="script.js"></script>
 </body>
 </html>
