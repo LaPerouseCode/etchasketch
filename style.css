@@ -12,15 +12,20 @@
     background-color: white;
     gap: 0;
     border: 2px solid black;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .square {
-    width: 30px;
-    height: 30px;
-    border: 2px solid black;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
 }
-
-
+.grostitre {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
 #clear-btn, #resize-btn {
     font-size: 20px;
     padding: 10px 20px;
